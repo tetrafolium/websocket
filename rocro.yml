@@ -5,6 +5,11 @@ inspecode:
     options: [-s]
     auto-fix: true
   go-test:
-    thresholds:
-      num-issues: 0
-    options: [-cover]
+    - ignore: client
+      thresholds:
+        num-issues: 0
+      options: [-cover]
+    - ignore: server
+      thresholds:
+        num-issues: 0
+      options: [-cover]
